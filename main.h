@@ -1,9 +1,20 @@
 #ifndef MAIN_H
 #define MAIN_H
+/* implementing needed libraries */
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+/* implementing needed functions */
 int _printf(const char *format, ...);
+int get_func(const char s, va_list ap);
+/**
+* struct print - struct print
+* @c : The character
+* @func : The function associated
+*/
 typedef struct print
 {
-char *x;
-void (*T_func)(va_list);
+char *c;
+void (*func)(va_list);
 }
 #endif
