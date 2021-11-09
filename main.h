@@ -7,6 +7,8 @@
 /* implementing needed functions */
 int _printf(const char *format, ...);
 int get_func(const char s, va_list ap);
+int print_i(va_list arg);
+int _putchar(char c);
 /**
 * struct print - struct print
 * @c : The character
