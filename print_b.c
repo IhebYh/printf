@@ -8,7 +8,7 @@ int print_b(va_list arg)
 {
 unsigned int n = 0, count = 0;
 
-n = va_arg(arg,unsigned int);
+n = va_arg(arg, unsigned int);
 
 if (n <= 1)
 {
