@@ -1,9 +1,11 @@
 #include "main.h"
 /**
- * _printf - entry point
- * @format:struct
- * Return:Null or number of characters used
+ * print_c - entry point
+ * @c : char
+ * Return: 1
  */
-int _printf(const char *format)
+int print_c(char c)
 {
-
+putchar(c);
+return (1);
+}

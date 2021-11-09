@@ -1,9 +1,16 @@
 #include "main.h"
 /**
- * _printf - entry point
- * @format:struct
- *Return:Null or number of characters used
+ * print_s - entry point
+ * @s : char
+ *Return: j
  */
-int _printf(const char *format)
+int print_s(char *s)
 {
-
+int j = 0;
+while (s[j] != '\0')
+{
+print_c(s[j]);
+j++
+}
+return (j);
+}
