@@ -9,7 +9,7 @@ int _printf(const char *format, ...);
 int get_func(const char s, va_list ap);
 int print_c(va_list arg);
 int print_s(va_list arg);
-int print_percentage(va_list arg);
+int print_percent(va_list arg);
 int print_i(va_list arg);
 int _putchar(char c);
 /**
