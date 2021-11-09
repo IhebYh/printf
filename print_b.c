@@ -17,9 +17,12 @@ count++;
 }
 else
 {
+while (n > 0)
+{
 _putchar((n % 2) + '0');
 n /= 2;
 count++;
+}
 }
 return (count);
 }
