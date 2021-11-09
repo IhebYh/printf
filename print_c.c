@@ -1,11 +1,11 @@
 #include "main.h"
 /**
  * print_c - entry point
- * @c : char
+ * @arg : va_list
  * Return: 1
  */
-int print_c(char c)
+int print_c(va_list arg)
 {
-_putchar(c);
+_putchar(va_arg(arg, int));
 return (1);
 }

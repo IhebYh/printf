@@ -4,18 +4,17 @@
  * @format:struct
  * Return:Null or number of characters used
  */
-int _printf(const char *format)
+int _printf(const char *format, ...)
 {
 va_list apt;
 unsigned int i = 0, count = 0, func = 0;
-char *s;
-if (!format || format[0] == '%' && format[1] == '\0')
+if (!format || (format[0] == '%' && format[1] == '\0'))
 return (-1);
-while (*(fromat + i) && format)
+while (*(format + i) && format)
 {
 if (*(format + i) == '%')
 {
-func = get_func(*(format + (i + 1)), arg);
+func = get_func(*(format + (i + 1)), apt);
 if (func != 0)
 {
 count += func;
@@ -30,6 +29,6 @@ count++;
 }
 i++;
 }
-va_end(arg);
+va_end(apt);
 return (count);
 }

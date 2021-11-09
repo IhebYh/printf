@@ -1,16 +1,20 @@
 #include "main.h"
 /**
  * print_s - entry point
- * @s : char
+ * @arg : va_list
  *Return: j
  */
-int print_s(char *s)
+int print_s(va_list arg)
 {
-int j = 0;
+char *s = va_arg(arg, char*);
+unsigned int j = 0;
+if (s == NULL)
+s = "(nil)";
 while (s[j] != '\0')
 {
-print_c(s[j]);
-j++
+_putchar(s[j]);
+j++;
 }
 return (j);
 }
+
