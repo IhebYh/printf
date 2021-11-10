@@ -9,9 +9,9 @@ int print_p(va_list arg)
 {
 char p[22];
 int count = 0, i = 0;
-long int n = 0;
+unsigned long int n = 0;
 
-n = va_arg(arg, long int);
+n = va_arg(arg, unsigned long int);
 if (n == 0)
 {
 _putchar('(');
