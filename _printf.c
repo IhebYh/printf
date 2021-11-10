@@ -29,7 +29,7 @@ continue;
 }
 else
 {
-func = get_func(format[i + 1]), apt);
+func = get_func(format[i + 1], apt);
 if (func != 0)
 {
 count += func;
