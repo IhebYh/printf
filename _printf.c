@@ -27,6 +27,19 @@ count += func;
 i += 2;
 continue;
 }
+if (func == 0 && (((*(format + (i + 1))) == 's') || ((*(format + (i + 1))) == 'c')))
+{
+_putchar('\0');
+i += 2;
+continue;
+}
+if ((func == 0 && !(((*(format + (i + 1))) == 's') || ((*(format + (i + 1))) == 'c'))))
+{
+_putchar('%');
+_putchar((*(format + (i + 1))));
+i += 2;
+continue;
+}
 if (*(format + (i + 1)) == '\0')
 {
 _putchar(*(format + i));
