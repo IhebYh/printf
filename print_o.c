@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_o - prints an octal.
+ * print_o - prints an octal
  *@o: the list of arguments
  * Return: number of printed characters.
  */
