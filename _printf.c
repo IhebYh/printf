@@ -36,7 +36,7 @@ count += func;
 i += 2;
 continue;
 }
-if (format[i + 1] == '\0')
+if (format[i + 1] == '\0' || func == 0 )
 {
 _putchar(format[i++]);
 count++;
