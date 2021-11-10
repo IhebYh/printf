@@ -7,15 +7,39 @@
 
 int print_p(va_list arg)
 {
-char p[22],phex[20];
-unsigned int count = 0, n = 0, i = 2;
-p[0] = '0';
-p[1] = 'x';
-n = va_arg(arg, unsigned int);
-phex = print_x(arg);
-for (; i < n; i++)
+char p[22];
+int count = 0, i = 0;
+long int n = 0;
+
+n = va_arg(arg, long int);
+if (n == 0)
 {
-p[i] = phex[i - 2];
+_putchar('(');
+_putchar('n');
+_putchar('i');
+_putchar('l');
+_putchar(')');
+count += 5;
+}
+else if (n > 0)
+{
+_putchar('0');
+_putchar('x');
+count += 2;
+while (n > 0)
+{
+if (((n % 16) >= 10) && ((n % 16) <= 15))
+p[i] = 87 + (n % 16);
+else
+p[i] = 48 + (n % 16);
+n /= 16;
+i++;
+}
+for (i -= 1; i >= 0; i--)
+{
+_putchar(p[i]);
+count++;
+}
 }
 return (count);
 }
