@@ -11,7 +11,7 @@ char hex[20];
 unsigned int count = 0, n = 0;
 int i = 0;
 
-n = va_start(arg, unsigned int);
+n = va_arg(arg, unsigned int);
 
 if(n == 0)
 {
@@ -25,11 +25,11 @@ hex[i] = 87 + (n % 16);
 else 
 hex[i] = 48 + (n % 16);
 n /= 16;
-i++
+i++;
 }
-for (i -= 1; i >= 0; i++)
+for (i -= 1; i >= 0; i--)
 {
-_putchar(hex[i] + '0');
+_putchar(hex[i]);
 count++;
 }
 return (count);
