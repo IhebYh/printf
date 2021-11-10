@@ -20,6 +20,15 @@ count++;
 }
 if (*(format + i) == '%')
 {
+if ((*(format + i + 1)) == '%')
+{
+_putchar('%');
+count++;
+i += 2;
+continue;
+}
+else
+{
 func = get_func(*(format + (i + 1)), apt);
 if (func != 0)
 {
@@ -27,29 +36,11 @@ count += func;
 i += 2;
 continue;
 }
-if (func == 0
-&&
-(((*(format + (i + 1))) == 's')
-|| ((*(format + (i + 1))) == 'c')))
-{
-_putchar('\0');
-i += 2;
-continue;
-}
-if ((func == 0
-&&
-!(((*(format + (i + 1))) == 's')
-|| ((*(format + (i + 1))) == 'c'))))
-{
-_putchar('%');
-_putchar((*(format + (i + 1))));
-i += 2;
-continue;
-}
 if (*(format + (i + 1)) == '\0')
 {
 _putchar(*(format + i));
 count++;
+}
 }
 }
 i++;
