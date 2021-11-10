@@ -13,7 +13,7 @@ int i = 0;
 
 n = va_arg(arg, unsigned int);
 
-if(n == 0)
+if (n == 0)
 {
 _putchar('0' + 0);
 count++;
@@ -22,7 +22,7 @@ while (n > 0)
 {
 if (((n % 16) >= 10) && ((n % 16) <= 15))
 hex[i] = 87 + (n % 16);
-else 
+else
 hex[i] = 48 + (n % 16);
 n /= 16;
 i++;
